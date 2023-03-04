@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "generate:types": "npx supabase gen types typescript --project-id obqzmwufckourbwbeqbe > ./src/interfaces/database.ts"
   },
