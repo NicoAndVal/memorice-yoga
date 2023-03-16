@@ -4,33 +4,29 @@ import './app.css'
 import { FinishPage } from './components/FinishPage'
 import { HomeApp } from './components/HomeApp';
 import { YogaApp } from './components/YogaApp'
+import { createTheme, ThemeProvider } from '@mui/material';
 
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
-
-  // const navigate =useNavigate()
-
-  // useEffect(() =>{
-  //   supabase.auth.onAuthStateChange((auth,session) =>{
-  //     if(!session){
-  //       navigate('/')
-  //     }else {
-  //       navigate('/home')
-  //     }
-  //   })
-  // }, [])
-
   return (
     <div className="app">
-      <Routes>
-        <Route path='/' element={<HomeApp/> }/>
-        {/* <Route path='/' element={<Auth/>}/> */}
-        <Route path='/home' element = {<HomeApp/>}/>
-        <Route path="/first" element={<YogaApp/>}/>
-        <Route path="/finish" element={<FinishPage/>}/>
-        <Route path='*' element={<h1>404: Not Found</h1>} />
-      </Routes>
-    </div>  
+      <ThemeProvider theme={darkTheme}>
+        <Routes>
+          <Route path='/' element={<HomeApp />} />
+          {/* <Route path='/' element={<Auth/>}/> */}
+          <Route path='/home' element={<HomeApp />} />
+          <Route path="/first" element={<YogaApp />} />
+          <Route path="/finish" element={<FinishPage />} />
+          <Route path='*' element={<h1>404: Not Found</h1>} />
+        </Routes>
+      </ThemeProvider>
+    </div>
   )
 }
 

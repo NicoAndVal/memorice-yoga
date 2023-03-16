@@ -6,6 +6,9 @@ import { PositionProvider } from './context/ContexPosition/PositionProvider'
 import { ModalProvider } from './context/ContextModal/ModalProvider'
 import './index.css'
 import { PostureProvider } from './context/ContextPostures/PostureProvider';
+import { createTheme } from '@mui/material'
+
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -18,5 +21,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </ModalProvider>
       </PositionProvider>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )

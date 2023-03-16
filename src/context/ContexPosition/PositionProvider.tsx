@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from 'react';
 import { PositionContext } from "./PositionContext"
 
 
@@ -10,6 +10,7 @@ export const PositionProvider = ({children}: props) => {
 
   const [position, setPosition] = useState(1)
   const [finalPosition, setFinalPosition] = useState(0)
+
 
   return (
       <PositionContext.Provider value={{position, setPosition, finalPosition, setFinalPosition}}>

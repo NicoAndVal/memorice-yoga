@@ -25,11 +25,10 @@ export const YogaApp = () => {
   const navigate = useNavigate()
   
   useEffect(() => {
+    if(position > finalPosition && position !== 1) return navigate('/finish')
     let postureFilter = postures?.filter((posture:Posture) => posture.position <= finalPosition)
     let posture: Posture | undefined = postureFilter && postureFilter[position - 1]
-    if(!posture) {
-      navigate('/finish')
-    }
+    if(!posture) return navigate('/')
     setPosture(posture)
     if (posture?.variante) {
       let randonNumber = random(0, 10)
