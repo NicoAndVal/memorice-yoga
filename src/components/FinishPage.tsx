@@ -30,7 +30,7 @@ export const FinishPage = () => {
         >
           <Typography
             variant='h6'
-          >Weena terminaste tu práctica de hoy!</Typography>
+          >Gracias por practicar hoy</Typography>
         </Grid>
         <Grid >
           <Button

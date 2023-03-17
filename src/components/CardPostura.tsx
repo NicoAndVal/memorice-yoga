@@ -18,9 +18,6 @@ export const CardPostura = ({ posture, variant }: Props) => {
   const [image, setImage] = useState(url)
   
   useEffect(() => {
-    console.log('useEffect', position)
-    console.log('image', image)
-    console.log('url', url)
     if(url === image || position === 1) return setLoadImage(false)
     if(variant) return setImage(variantPosture?.url); // cambiar la imagen
     setImage(url); // cambiar la imagen
