@@ -5,6 +5,7 @@ import { FinishPage } from './components/FinishPage'
 import { HomeApp } from './components/HomeApp';
 import { YogaApp } from './components/YogaApp'
 import { createTheme, ThemeProvider } from '@mui/material';
+import { Auth } from './Auth/Auth';
 
 
 const darkTheme = createTheme({
@@ -18,8 +19,7 @@ function App() {
     <div className="app">
       <ThemeProvider theme={darkTheme}>
         <Routes>
-          <Route path='/' element={<HomeApp />} />
-          {/* <Route path='/' element={<Auth/>}/> */}
+          <Route path='/' element={<Auth/>}/> 
           <Route path='/home' element={<HomeApp />} />
           <Route path="/first" element={<YogaApp />} />
           <Route path="/finish" element={<FinishPage />} />

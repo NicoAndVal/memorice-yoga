@@ -31,6 +31,8 @@ export const FinishPage = () => {
           <Typography
             variant='h6'
           >Gracias por practicar hoy</Typography>
+          
+
         </Grid>
         <Grid >
           <Button
